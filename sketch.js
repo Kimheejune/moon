@@ -12,6 +12,8 @@ function setup() {
   img4 = loadImage("venus.png");
   img5 = loadImage("mars.png");
   img6 = loadImage("sun.png");
+  img6 = loadImage("gee.png");
+  
   createCanvas(500, 500);
 }
 
@@ -64,6 +66,16 @@ function draw() {
    
 
     var duration = 6000;
+   var timing = (new Date()%duration)/duration;
+
+   fill(209,192,70);
+   noStroke()
+   image(img2,250 + Math.cos(timing*2*PI)*250+Math.cos(timing*4*PI)*80,          
+        250 + Math.sin(timing*2*PI)*200+Math.sin(timing*4*PI)*80,       
+        20,                                    
+        20);   
+
+        var duration = 2000;
    var timing = (new Date()%duration)/duration;
 
    fill(209,192,70);
